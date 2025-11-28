@@ -1,5 +1,5 @@
 <img width="1372" height="680" alt="image" src="https://github.com/user-attachments/assets/0f35f54c-f12d-4846-8982-5dc22a99415f" />
-[Mi Web](https://makinatetanos.github.io/miweb/)
+![Mi Web](https://makinatetanos.github.io/miweb/)
 
 ## Presentación
 
