@@ -6,11 +6,11 @@ Si no te gusta lo que lees, no lo leas.
 
 Temas que puedo escribir:
 
-- Software.
-- Cultura de Internet.
-- Crypto y Blockchain.
-- Política y Economía.
-- Fitness.
+* Software.
+* Cultura de Internet.
+* Crypto y Blockchain.
+* Política y Economía.
+* Fitness.
 
 También estaré compartiendo cosas por:
 
