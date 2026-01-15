@@ -14,6 +14,6 @@ Temas que puedo escribir:
 
 También estaré compartiendo cosas por:
 
-[]([Odysee](https://odysee.com/@abelpascualllfit:6))
+[Odysee](https://odysee.com/@abelpascualllfit:6)
 
 Así que sigueme en Odysee, el enlace lo tienes arriba.
