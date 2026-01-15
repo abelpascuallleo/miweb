@@ -13,41 +13,39 @@
             theme: {
                 extend: {
                     colors: {
-                        'terminal-bg': '#121212',
-                        'terminal-text': '#e0e0e0',
-                        'terminal-green': '#0f0',
+                        'theme-blue': '#2563eb',
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-terminal-bg text-terminal-text font-sans flex flex-col min-h-screen items-center">
+<body class="bg-white text-black font-sans flex flex-col min-h-screen items-center">
     <header class="w-full max-w-[700px] p-5 text-center">
-        <h1 class="my-5 text-4xl font-light text-white">Abel Pll</h1>
+        <h1 class="my-5 text-4xl font-light text-black">Abel Pll</h1>
         <nav>
             <ul class="p-0 m-0">
-                <li class="inline-block mx-4"><a href="{{ url_for('inicio') }}" class="text-terminal-text text-lg px-2 py-1 transition-colors duration-300 hover:text-white">Inicio</a></li>
-                <li class="inline-block mx-4"><a href="{{ url_for('proyectos') }}" class="text-terminal-text text-lg px-2 py-1 transition-colors duration-300 hover:text-white">Proyectos</a></li>
-                <li class="inline-block mx-4"><a href="{{ url_for('contacto') }}" class="text-terminal-text text-lg px-2 py-1 transition-colors duration-300 hover:text-white">Contacto</a></li>
+                <li class="inline-block mx-4"><a href="{{ url_for('inicio') }}" class="text-gray-700 text-lg px-2 py-1 transition-colors duration-300 hover:text-theme-blue">Inicio</a></li>
+                <li class="inline-block mx-4"><a href="{{ url_for('proyectos') }}" class="text-gray-700 text-lg px-2 py-1 transition-colors duration-300 hover:text-theme-blue">Proyectos</a></li>
+                <li class="inline-block mx-4"><a href="{{ url_for('contacto') }}" class="text-gray-700 text-lg px-2 py-1 transition-colors duration-300 hover:text-theme-blue">Contacto</a></li>
             </ul>
         </nav>
     </header>
     <main class="flex-grow w-full max-w-[700px] p-5 text-center">
-        <h1 class="text-3xl font-normal text-white mb-4">Proyectos</h1>
-        <p class="mb-6">Aquí puedes ver los proyectos que he realizado</p>
+        <h1 class="text-3xl font-normal text-black mb-4">Proyectos</h1>
+        <p class="mb-6">Accede a mis proyectos, hay muchos interesantes. Puedes aportar Issures si lo deseas.</p>
         <ul class="list-none p-0 my-4 space-y-4">
         <li class="my-2">
-            <a href="https://github.com/makinatetanos/Generador-de-sitios-estaticos" target="_blank" rel="noopener noreferrer" class="text-terminal-green font-semibold text-lg hover:text-white hover:underline transition-colors duration-300">Generador de Sitios Estaticos</a>
+            <a href="https://github.com/makinatetanos/Generador-de-sitios-estaticos" target="_blank" rel="noopener noreferrer" class="text-theme-blue font-semibold text-lg hover:text-blue-800 hover:underline transition-colors duration-300">Generador de Sitios Estaticos</a>
         </li>
         <li class="my-2">
-            <a href="https://github.com/makinatetanos/ia-codex-api" target="_blank" rel="noopener noreferrer" class="text-terminal-green font-semibold text-lg hover:text-white hover:underline transition-colors duration-300">IA Codex Api</a>
+            <a href="https://github.com/makinatetanos/ia-codex-api" target="_blank" rel="noopener noreferrer" class="text-theme-blue font-semibold text-lg hover:text-blue-800 hover:underline transition-colors duration-300">IA Codex Api</a>
         </li>
         <li class="my-2">
-            <a href="https://github.com/makinatetanos/generador-contrase-as-python" target="_blank" rel="noopener noreferrer" class="text-terminal-green font-semibold text-lg hover:text-white hover:underline transition-colors duration-300">Generador de Contraseñas</a>
+            <a href="https://github.com/makinatetanos/generador-contrase-as-python" target="_blank" rel="noopener noreferrer" class="text-theme-blue font-semibold text-lg hover:text-blue-800 hover:underline transition-colors duration-300">Generador de Contraseñas</a>
         </li>
         <li class="my-2">
-            <a href="https://github.com/makinatetanos/GoDorksPY" target="_blank" rel="noopener noreferrer" class="text-terminal-green font-semibold text-lg hover:text-white hover:underline transition-colors duration-300">GoDorksPY OSINT</a>
+            <a href="https://github.com/makinatetanos/GoDorksPY" target="_blank" rel="noopener noreferrer" class="text-theme-blue font-semibold text-lg hover:text-blue-800 hover:underline transition-colors duration-300">GoDorksPY OSINT</a>
         </li>
     </ul>
     </main>

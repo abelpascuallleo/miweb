@@ -11,9 +11,7 @@
             theme: {
                 extend: {
                     colors: {
-                        'terminal-bg': '#121212',
-                        'terminal-text': '#e0e0e0',
-                        'terminal-green': '#0f0',
+                        'theme-blue': '#2563eb',
                     }
                 }
             }
@@ -21,38 +19,42 @@
     </script>
     <meta name="robots" content="index,follow">
 </head>
-<body class="bg-terminal-bg text-terminal-text font-sans flex flex-col min-h-screen items-center">
+<body class="bg-white text-black font-sans flex flex-col min-h-screen items-center">
     <header class="w-full max-w-[700px] p-5 text-center">
-        <h1 class="my-5 text-4xl font-light text-white">Abel Pll</h1>
+        <h1 class="my-5 text-4xl font-light text-black">Abel Pll</h1>
         <nav>
             <ul class="p-0 m-0">
-                <li class="inline-block mx-4"><a href="{{ url_for('inicio') }}" class="text-terminal-text text-lg px-2 py-1 transition-colors duration-300 hover:text-white">Inicio</a></li>
-                <li class="inline-block mx-4"><a href="{{ url_for('proyectos') }}" class="text-terminal-text text-lg px-2 py-1 transition-colors duration-300 hover:text-white">Proyectos</a></li>
-                <li class="inline-block mx-4"><a href="{{ url_for('contacto') }}" class="text-terminal-text text-lg px-2 py-1 transition-colors duration-300 hover:text-white">Contacto</a></li>
+                <li class="inline-block mx-4"><a href="{{ url_for('inicio') }}" class="text-gray-700 text-lg px-2 py-1 transition-colors duration-300 hover:text-theme-blue">Inicio</a></li>
+                <li class="inline-block mx-4"><a href="{{ url_for('proyectos') }}" class="text-gray-700 text-lg px-2 py-1 transition-colors duration-300 hover:text-theme-blue">Proyectos</a></li>
+                <li class="inline-block mx-4"><a href="{{ url_for('contacto') }}" class="text-gray-700 text-lg px-2 py-1 transition-colors duration-300 hover:text-theme-blue">Contacto</a></li>
             </ul>
         </nav>
     </header>
     <main class="flex-grow w-full max-w-[700px] p-5">
         <section id="bienvenida" class="text-center mb-10">
-            <h2 class="text-2xl font-light text-white mb-4">Bienvenido a mi rincón en la web</h2>
-            <p class="text-lg">Soy un desarrollador python con amplias ganas de seguir desarrollando proyectos nuevos y aprendizajes.</p>
+            <h2 class="text-2xl font-light text-black mb-4">Bienvenido a mi web</h2>
+            <p class="text-lg">
+                Soy un Emprendedor Digital y me encanta el desarrollo web porque me da ventaja 
+                competitiva. También me gusta el Fitness por su enfoque en la superación personal.
+                Hablare de estos temas, y otros en mi blog, así que debes leerlo, te aseguro que va a ser muy interesante.
+            </p>
         </section>
         <section id="posts" class="space-y-12">
             {% for post in posts %}
-                <article class="bg-[#1a1a1a] p-6 rounded-lg shadow-lg border border-gray-800">
-                    <div class="prose prose-invert max-w-none prose-a:text-terminal-green prose-a:no-underline hover:prose-a:text-white prose-headings:text-white">
+                <article class="bg-gray-50 p-6 rounded-lg shadow-lg border border-gray-200">
+                    <div class="prose max-w-none prose-a:text-theme-blue prose-a:no-underline hover:prose-a:text-blue-800 prose-headings:text-black">
                         {{ post.contenido_html | safe }}
                     </div>
-                    <hr class="border-gray-700 my-6">
-                    <a href="https://donate.stripe.com/aFa4gr8a43LReAx0p7bbG03" class="inline-block px-6 py-2 bg-terminal-green text-black font-bold rounded hover:bg-white hover:text-[#0a0] transition-colors duration-300 no-underline text-lg">
+                    <hr class="border-gray-300 my-6">
+                    <a href="https://donate.stripe.com/aFa4gr8a43LReAx0p7bbG03" class="inline-block px-6 py-2 bg-theme-blue text-white font-bold rounded hover:bg-blue-700 transition-colors duration-300 no-underline text-lg">
                         💚 Donar
                     </a>
                 </article>
             {% endfor %}
         </section>
     </main>
-    <footer class="w-full max-w-[700px] p-5 text-center mt-auto text-gray-400 text-sm">
-        <p>&copy; 2024 Abel Pll. Todos los derechos reservados.</p>
+    <footer class="w-full max-w-[700px] p-5 text-center mt-auto text-gray-500 text-sm">
+        <p>&copy; 2026 Abel Pll. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>

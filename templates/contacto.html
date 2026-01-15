@@ -11,9 +11,7 @@
             theme: {
                 extend: {
                     colors: {
-                        'terminal-bg': '#121212',
-                        'terminal-text': '#e0e0e0',
-                        'terminal-green': '#0f0',
+                        'theme-blue': '#2563eb',
                     }
                 }
             }
@@ -22,25 +20,25 @@
     <meta name="robots" content="index,follow">
     <meta name="author" content="Abel Pll">
 </head>
-<body class="bg-terminal-bg text-terminal-text font-sans flex flex-col min-h-screen items-center">
+<body class="bg-white text-black font-sans flex flex-col min-h-screen items-center">
     <header class="w-full max-w-[700px] p-5 text-center">
-        <h1 class="my-5 text-4xl font-light text-white">Abel Pll</h1>
+        <h1 class="my-5 text-4xl font-light text-black">Abel Pll</h1>
         <nav>
             <ul class="p-0 m-0">
-                <li class="inline-block mx-4"><a href="{{ url_for('inicio') }}" class="text-terminal-text text-lg px-2 py-1 transition-colors duration-300 hover:text-white">Inicio</a></li>
-                <li class="inline-block mx-4"><a href="{{ url_for('proyectos') }}" class="text-terminal-text text-lg px-2 py-1 transition-colors duration-300 hover:text-white">Proyectos</a></li>
-                <li class="inline-block mx-4"><a href="{{ url_for('contacto') }}" class="text-terminal-text text-lg px-2 py-1 transition-colors duration-300 hover:text-white">Contacto</a></li>
+                <li class="inline-block mx-4"><a href="{{ url_for('inicio') }}" class="text-gray-700 text-lg px-2 py-1 transition-colors duration-300 hover:text-theme-blue">Inicio</a></li>
+                <li class="inline-block mx-4"><a href="{{ url_for('proyectos') }}" class="text-gray-700 text-lg px-2 py-1 transition-colors duration-300 hover:text-theme-blue">Proyectos</a></li>
+                <li class="inline-block mx-4"><a href="{{ url_for('contacto') }}" class="text-gray-700 text-lg px-2 py-1 transition-colors duration-300 hover:text-theme-blue">Contacto</a></li>
             </ul>
         </nav>
     </header>
     <main class="flex-grow w-full max-w-[700px] p-5 text-center">
-        <h1 class="text-3xl font-normal text-white mb-4">Contacto</h1>
+        <h1 class="text-3xl font-normal text-black mb-4">Contacto</h1>
         <p class="mb-6">Puedes contactarme a través de mis redes sociales:</p>
         <div class="redes-sociales">
-            <h2 class="text-2xl font-light text-white mb-4">Redes Sociales</h2>
+            <h2 class="text-2xl font-light text-black mb-4">Redes Sociales</h2>
             <div>
-                <a rel="me" href="https://www.youtube.com/@makinatetanos" target="_blank" class="text-terminal-green font-bold text-lg flex items-center justify-center gap-2 hover:text-white transition-colors duration-200" title="Perfil de Abel Pll en YouTube">
-                    YouTube
+                <a rel="me" href="https://odysee.com/@abelpascualllfit:6" target="_blank" class="text-theme-blue font-bold text-lg flex items-center justify-center gap-2 hover:text-blue-800 transition-colors duration-200" title="Perfil de Abel Pll en YouTube">
+                    Odysee
                 </a>
             </div>
         </div>
