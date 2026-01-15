@@ -77,15 +77,24 @@ def build_posts() -> None:
   <title>{nombre}</title>
   <style>
     body {{
-      background: #111;
-      color: #0f0;
-      font-family: monospace;
-      padding: 2em;
+      background-color: #ffffff;
+      color: #1f2937;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
       line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
     }}
-    a {{ color: #0f0; }}
-    h1, h2, h3, h4, h5, h6 {{ color: #0f0; }}
-    hr {{ border: 1px solid #0f0; }}
+    a {{ color: #2563eb; text-decoration: none; font-weight: 500; }}
+    a:hover {{ text-decoration: underline; color: #1d4ed8; }}
+    h1, h2, h3, h4, h5, h6 {{ color: #111827; margin-top: 2em; margin-bottom: 0.75em; font-weight: 700; line-height: 1.2; }}
+    h1 {{ font-size: 2.25rem; margin-top: 0.5em; }}
+    hr {{ border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0; }}
+    img {{ max-width: 100%; height: auto; border-radius: 0.5rem; }}
+    pre {{ background: #1f2937; color: #f9fafb; padding: 1.25rem; border-radius: 0.5rem; overflow-x: auto; }}
+    code {{ background: #f3f4f6; padding: 0.2em 0.4em; border-radius: 0.25rem; font-family: monospace; font-size: 0.9em; }}
+    pre code {{ background: transparent; padding: 0; color: inherit; }}
+    blockquote {{ border-left: 4px solid #e5e7eb; padding-left: 1rem; color: #4b5563; font-style: italic; }}
   </style>
   <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" />
   <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin />
@@ -123,5 +132,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
-
