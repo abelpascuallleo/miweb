@@ -5,40 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abel Pll | Desarrollador</title>
     <meta name="description" content="Blog personal de Abel Pll sobre desarrollo, ciber activismo, crítica social y experiencias en tecnología.">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'terminal-bg': '#121212',
+                        'terminal-text': '#e0e0e0',
+                        'terminal-green': '#0f0',
+                    }
+                }
+            }
+        }
+    </script>
     <meta name="robots" content="index,follow">
 </head>
-<body>
-    <header>
-        <h1>Abel Pll</h1>
+<body class="bg-terminal-bg text-terminal-text font-sans flex flex-col min-h-screen items-center">
+    <header class="w-full max-w-[700px] p-5 text-center">
+        <h1 class="my-5 text-4xl font-light text-white">Abel Pll</h1>
         <nav>
-            <ul>
-                <li><a href="{{ url_for('inicio') }}">Inicio</a></li>
-                <li><a href="{{ url_for('proyectos') }}">Proyectos</a></li>
-                <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+            <ul class="p-0 m-0">
+                <li class="inline-block mx-4"><a href="{{ url_for('inicio') }}" class="text-terminal-text text-lg px-2 py-1 transition-colors duration-300 hover:text-white">Inicio</a></li>
+                <li class="inline-block mx-4"><a href="{{ url_for('proyectos') }}" class="text-terminal-text text-lg px-2 py-1 transition-colors duration-300 hover:text-white">Proyectos</a></li>
+                <li class="inline-block mx-4"><a href="{{ url_for('contacto') }}" class="text-terminal-text text-lg px-2 py-1 transition-colors duration-300 hover:text-white">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section id="bienvenida">
-            <h2>Bienvenido a mi rincón en la web</h2>
-            <p>Soy un desarrollador python con amplias ganas de seguir desarrollando proyectos nuevos y aprendizajes.</p>
+    <main class="flex-grow w-full max-w-[700px] p-5">
+        <section id="bienvenida" class="text-center mb-10">
+            <h2 class="text-2xl font-light text-white mb-4">Bienvenido a mi rincón en la web</h2>
+            <p class="text-lg">Soy un desarrollador python con amplias ganas de seguir desarrollando proyectos nuevos y aprendizajes.</p>
         </section>
-        <br>
-        <section id="posts">
+        <section id="posts" class="space-y-12">
             {% for post in posts %}
-                <article>
-                    <div>{{ post.contenido_html | safe }}</div>
-                    <hr>
-                    <a href="https://donate.stripe.com/aFa4gr8a43LReAx0p7bbG03"
-                       style="display:inline-block;padding:0.5em 1.5em;background:#0f0;color:#111;font-weight:bold;border:none;border-radius:4px;text-decoration:none;font-size:1.1em;">
+                <article class="bg-[#1a1a1a] p-6 rounded-lg shadow-lg border border-gray-800">
+                    <div class="prose prose-invert max-w-none prose-a:text-terminal-green prose-a:no-underline hover:prose-a:text-white prose-headings:text-white">
+                        {{ post.contenido_html | safe }}
+                    </div>
+                    <hr class="border-gray-700 my-6">
+                    <a href="https://donate.stripe.com/aFa4gr8a43LReAx0p7bbG03" class="inline-block px-6 py-2 bg-terminal-green text-black font-bold rounded hover:bg-white hover:text-[#0a0] transition-colors duration-300 no-underline text-lg">
                         💚 Donar
                     </a>
                 </article>
             {% endfor %}
         </section>
     </main>
-    <footer>
+    <footer class="w-full max-w-[700px] p-5 text-center mt-auto text-gray-400 text-sm">
         <p>&copy; 2024 Abel Pll. Todos los derechos reservados.</p>
     </footer>
 </body>

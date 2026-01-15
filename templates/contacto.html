@@ -5,28 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto | Abel Pll</title>
     <meta name="description" content="Página de contacto de Abel Pll. Encuentra aquí mis redes sociales y formas de comunicación.">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'terminal-bg': '#121212',
+                        'terminal-text': '#e0e0e0',
+                        'terminal-green': '#0f0',
+                    }
+                }
+            }
+        }
+    </script>
     <meta name="robots" content="index,follow">
     <meta name="author" content="Abel Pll">
 </head>
-<body>
-    <header>
-        <h1>Abel Pll</h1>
+<body class="bg-terminal-bg text-terminal-text font-sans flex flex-col min-h-screen items-center">
+    <header class="w-full max-w-[700px] p-5 text-center">
+        <h1 class="my-5 text-4xl font-light text-white">Abel Pll</h1>
         <nav>
-            <ul>
-                <li><a href="{{ url_for('inicio') }}">Inicio</a></li>
-                <li><a href="{{ url_for('proyectos') }}">Proyectos</a></li>
-                <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+            <ul class="p-0 m-0">
+                <li class="inline-block mx-4"><a href="{{ url_for('inicio') }}" class="text-terminal-text text-lg px-2 py-1 transition-colors duration-300 hover:text-white">Inicio</a></li>
+                <li class="inline-block mx-4"><a href="{{ url_for('proyectos') }}" class="text-terminal-text text-lg px-2 py-1 transition-colors duration-300 hover:text-white">Proyectos</a></li>
+                <li class="inline-block mx-4"><a href="{{ url_for('contacto') }}" class="text-terminal-text text-lg px-2 py-1 transition-colors duration-300 hover:text-white">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>Contacto</h1>
-        <p>Puedes contactarme a través de mis redes sociales:</p>
+    <main class="flex-grow w-full max-w-[700px] p-5 text-center">
+        <h1 class="text-3xl font-normal text-white mb-4">Contacto</h1>
+        <p class="mb-6">Puedes contactarme a través de mis redes sociales:</p>
         <div class="redes-sociales">
-            <h2>Redes Sociales</h2>
+            <h2 class="text-2xl font-light text-white mb-4">Redes Sociales</h2>
             <div>
-                <a rel="me" href="https://www.youtube.com/@makinatetanos" target="_blank" class="red-social-link" title="Perfil de Abel Pll en YouTube">
+                <a rel="me" href="https://www.youtube.com/@makinatetanos" target="_blank" class="text-terminal-green font-bold text-lg flex items-center justify-center gap-2 hover:text-white transition-colors duration-200" title="Perfil de Abel Pll en YouTube">
                     YouTube
                 </a>
             </div>
